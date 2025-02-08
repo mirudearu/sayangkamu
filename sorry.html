@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Sorry</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('https://i.pinimg.com/736x/a5/2f/9d/a52f9de060f22fde96e40e264ff41925.jpg');
+            text-align: center;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .mailbox {
+            width: 100px;
+            height: 100px;
+            background: url('https://cdn-icons-png.flaticon.com/512/561/561127.png') no-repeat center/cover;
+            cursor: pointer;
+            margin: 20px auto;
+        }
+        .message {
+            display: none;
+            background: #fff0f5;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 120px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 250px;
+            border: 2px solid #ff69b4;
+        }
+        .heart {
+            color: red;
+            font-size: 50px;
+            animation: heartbeat 1s infinite;
+        }
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        button {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+        button:hover {
+            background-color: #ff1493;
+        }
+        .cat {
+            width: 80px;
+            height: 80px;
+            margin: 10px;
+        }
+        .large-cat {
+            width: 150px;
+            height: 150px;
+        }
+        .love-message {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Coba dibuka hehe <3 </h2>
+        <img class="cat" src="https://i.pinimg.com/736x/4d/c7/30/4dc730762d81ca9fc101e75d10c17bc8.jpg" alt="Cute Cat">
+        <div class="mailbox" onclick="showMessage()"></div>
+        <div class="message" id="message">
+            <p>I made a mistake, and I feel terrible about it. I overthink the whole day, i hope you don't hate me..</p>
+            <div class="heart">❤️</div>
+            <img class="cat large-cat" src="https://i.pinimg.com/736x/8f/5e/1e/8f5e1ec4f794365d9f74a0709505e320.jpg" alt="Cute Cat">
+            <button onclick="showLoveMessage()">pencet sekali lagi</button>
+            <div class="love-message" id="loveMessage">
+                <p style="color: #ff1493; font-size: 20px;">Maafin aku ya, i'll try better </p>
+                <img class="cat large-cat" src="https://i.pinimg.com/736x/65/d8/c5/65d8c5734256841d9ce205276ca26936.jpg" alt="Cute Love Cat">
+            </div>
+        </div>
+    </div>
+    <script>
+        function showMessage() {
+            document.getElementById('message').style.display = 'block';
+        }
+        function showLoveMessage() {
+            document.getElementById('loveMessage').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
+
